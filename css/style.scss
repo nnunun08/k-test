@@ -3,6 +3,9 @@
 
 :root {
     --white: #fff;
+	--primary: #98D0D3;
+	--black: #555454;
+	--red: #C63102;
 }
 
 html {
@@ -10,7 +13,8 @@ html {
 }
 
 body {
-	min-width: 360px;
+	min-width: 320px;
+	letter-spacing: -0.025em;
 }
 
 Select {
@@ -34,6 +38,11 @@ input {
 	outline: none;
 }
 
+button {
+	border: 0;
+	font-family: inherit;
+}
+
 .lineClamp3 {
 	overflow:hidden;
 	text-overflow:ellipsis;
@@ -41,6 +50,18 @@ input {
 	-webkit-box-orient: vertical;
 	display: -webkit-box;
 }
+
+// Portrait 최대 width
+$maxWidth: 430px;
+
+.inner {
+	max-width: $maxWidth;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+
+
 // 타블렛브레이크 포인트
 @media screen and (max-width:768px) {
 
@@ -49,4 +70,162 @@ input {
 @media screen and (max-width:1280px) {
 	
 }
-  
+
+.input {
+	color: var(--black);
+	font-size: 16px;
+	font-weight: 400;
+	box-sizing: border-box;
+	padding: 12px;
+	height: 40px;
+	border-radius: 5px;
+	border: 0.2px solid #000;
+	background: #F5F5F5;
+	box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25) inset;
+	&::placeholder {
+		color: #848383;
+	}
+}
+.btn {
+	width: 100%;
+	height: 47px;
+	border-radius: 5px;
+	background: var(--primary);
+	color: #555454;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.section-login {
+	padding-bottom: 140px;
+	position: relative;
+	height: 100vh;
+	box-sizing: border-box;
+
+	.lock {
+		display: flex;
+		justify-content: flex-end;
+		padding: 11px 0;
+		.ic-lock {
+			width: 24px;
+			height: 24px;
+			background: url(../img/ic_lock.svg) center no-repeat;
+		}
+	}
+
+	.hero {
+		max-width: 290px;
+		margin: 0 auto;
+		margin-top: 26px;
+		margin-bottom: 70px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: var(--black);
+		font-weight: 700;
+		.sub {
+			font-size: 14px;
+		}
+		.logo {
+			margin-top: 18px;
+			margin-bottom: 10px;
+		}
+		.bottom {
+			width: 100%;
+			text-align: right;
+			.red {
+				font-size: 20px;
+				color: var(--red);
+			}
+			.small {
+				font-size: 12px;
+				margin-top: 1px;
+			}
+		}
+	}
+
+	.foam {
+
+	}
+	.inputWrap {
+		display: flex;
+		flex-direction: column;
+		gap: 13px;
+		margin-bottom: 28px;
+	}
+
+	.desc {
+		color: #848383;
+		font-size: 12px;
+		font-weight: 400;
+		text-align: center;
+		margin-bottom: 27px;
+	}
+
+	.newGroup {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 32px;
+		.rel {
+			position: relative;
+			width: auto;
+			height: auto;
+		}
+		.text {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translate(-50%, 100%);
+			white-space: nowrap;
+			padding-top: 8px;
+			color: #555454;
+			font-size: 14px;
+			font-weight: 500;
+		}
+		.ic-plus {
+			width: 60px;
+			height: 60px;
+			background: url(../img/btn_newGroup.svg) center no-repeat;
+		}
+	}
+
+	.notice {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 12px 20px 38px;
+		background-color: rgba(255,255,255,0.9);
+		max-width: $maxWidth;
+		margin: 0 auto;
+		.tit {
+			color: var(--black);
+			font-size: 12px;
+			font-weight: 700;
+			margin-bottom: 6px;
+		}
+		li {
+			a {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				padding: 6px 0;
+				color: #555454;
+				font-size: 12px;
+				font-weight: 500;
+			}
+		}
+		.text{
+			flex: 1 0 0;
+			padding-right: 10px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.user {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+}
