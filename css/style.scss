@@ -15,6 +15,8 @@ html {
 body {
 	min-width: 320px;
 	letter-spacing: -0.025em;
+	color: #848383;
+	line-height: 1.6;
 }
 
 Select {
@@ -53,13 +55,29 @@ button {
 
 // Portrait 최대 width
 $maxWidth: 430px;
-
+$sidePadding : 15px;
 .inner {
 	max-width: $maxWidth;
-	padding: 0 15px;
+	padding: 0 $sidePadding;
 	margin: 0 auto;
 }
 
+.red {
+	color: var(--red);
+}
+
+p {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+b {
+	font-weight: 600;
+}
+
+strong {
+	font-weight: 700;
+}
 
 
 // 타블렛브레이크 포인트
@@ -71,7 +89,7 @@ $maxWidth: 430px;
 	
 }
 
-.input {
+@mixin foamStyle {
 	color: var(--black);
 	font-size: 16px;
 	font-weight: 400;
@@ -85,8 +103,63 @@ $maxWidth: 430px;
 	&::placeholder {
 		color: #848383;
 	}
+	@content;
 }
+
+.input {
+	@include foamStyle;
+}
+
+.select {
+	@include foamStyle;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 22px;
+	background: #F5F5F5 url(../img/ic_sel_arr.svg) right 8px center no-repeat;
+}
+.terms {
+	@include foamStyle;
+	display: block;
+	width: 100%;
+	min-height: 124px;
+	padding: 10px;
+	font-size: 12px;
+}
+.textarea {
+	@include foamStyle;
+	display: block;
+	width: 100%;
+	padding: 10px;
+	resize: none;
+	font-size: 12px;
+}
+
+.checkboxBx {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	font-size: 14px;
+	font-weight: 700;
+	gap: 13px;
+	input[type='checkbox'] {
+		display: none;
+	}
+	.checkboxIcon {
+		display: block;
+		width: 19px;
+		height: 19px;
+		border: 2px solid #6F6E6E;
+		box-sizing: border-box;
+	}
+	input:checked + .checkboxIcon {
+		background-color: var(--primary);
+	}
+}
+
 .btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
 	height: 47px;
 	border-radius: 5px;
@@ -227,5 +300,77 @@ $maxWidth: 430px;
 			overflow: hidden;
 			text-overflow: ellipsis;
 		}
+	}
+}
+
+
+.section-main {
+	padding-bottom: 82px;
+}
+.bottomNav {
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	max-width: $maxWidth;
+	width: 100%;
+	margin: 0 auto;
+	padding: $sidePadding;
+	background-color: #fff;
+}
+.topNav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+	padding: 0 12px;
+	background-color: #98D0D3;
+	height: 55px;
+	width: calc(100% + $sidePadding + $sidePadding);
+	box-sizing: border-box;
+	margin-left: - $sidePadding;
+	margin-right: - $sidePadding;
+	.tit {
+		color: var(--red);
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 800;
+		line-height: normal;
+	}
+	.left {
+		min-width: 32px;
+		min-height: 32px;
+	}
+	.right {
+		min-width: 32px;
+		min-height: 32px;
+		.home {
+			display: block;
+			width: 32px;
+			height: 32px;
+			background: url(../img/Home.svg) center no-repeat;
+		}
+	}
+}	
+
+
+.form {
+	width: 100%;
+	padding: 0 5px;
+	text-align: center;
+	.inputRow {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		input, 
+		select {
+			flex: 1 0 0;
+		}
+		.w25 {
+			flex: 0 0 25%;
+		}
+	}
+	.inputRow + .inputRow {
+		margin-top: 15px;
 	}
 }
