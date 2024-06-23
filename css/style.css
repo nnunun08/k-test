@@ -70,6 +70,7 @@ p {
 }
 
 b {
+  color: #6F6E6E;
   font-weight: 600;
 }
 
@@ -90,10 +91,10 @@ strong {
   box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25) inset;
 }
 .input::-moz-placeholder {
-  color: #848383;
+  color: #B8B8B8;
 }
 .input::placeholder {
-  color: #848383;
+  color: #B8B8B8;
 }
 
 .select {
@@ -113,10 +114,10 @@ strong {
   background: #F5F5F5 url(../img/ic_sel_arr.svg) right 8px center no-repeat;
 }
 .select::-moz-placeholder {
-  color: #848383;
+  color: #B8B8B8;
 }
 .select::placeholder {
-  color: #848383;
+  color: #B8B8B8;
 }
 
 .terms {
@@ -137,10 +138,10 @@ strong {
   font-size: 12px;
 }
 .terms::-moz-placeholder {
-  color: #848383;
+  color: #B8B8B8;
 }
 .terms::placeholder {
-  color: #848383;
+  color: #B8B8B8;
 }
 
 .textarea {
@@ -161,10 +162,60 @@ strong {
   font-size: 12px;
 }
 .textarea::-moz-placeholder {
-  color: #848383;
+  color: #B8B8B8;
 }
 .textarea::placeholder {
-  color: #848383;
+  color: #B8B8B8;
+}
+
+.inputDiv {
+  color: var(--black);
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+  padding: 12px;
+  height: 40px;
+  border-radius: 5px;
+  border: 0.2px solid #000;
+  background: #F5F5F5;
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25) inset;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #B8B8B8;
+  font-size: 14px;
+}
+.inputDiv::-moz-placeholder {
+  color: #B8B8B8;
+}
+.inputDiv::placeholder {
+  color: #B8B8B8;
+}
+.inputDiv input {
+  border: 0;
+  background-color: transparent;
+  font-family: inherit; /* 폰트 상속 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  flex: 1 0 auto !important;
+}
+.inputDiv input::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+}
+.inputDiv .flex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .checkboxBx {
@@ -365,6 +416,12 @@ strong {
   min-width: 32px;
   min-height: 32px;
 }
+.topNav .left .back {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url(../img/ic_back.svg) center no-repeat;
+}
 .topNav .right {
   min-width: 32px;
   min-height: 32px;
@@ -389,10 +446,33 @@ strong {
 .form .inputRow input,
 .form .inputRow select {
   flex: 1 0 0;
+  width: 100%;
 }
 .form .inputRow .w25 {
   flex: 0 0 25%;
 }
 .form .inputRow + .inputRow {
   margin-top: 15px;
+}
+.form .inputLabel {
+  display: flex;
+  color: #6F6E6E;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.requestSummary .tr {
+  display: flex;
+  gap: 6px;
+  font-weight: 500;
+}
+.requestSummary .tr .date {
+  width: 82px;
+}
+.requestSummary .tr .time {
+  width: 82px;
+}
+.requestSummary .tr .during {
+  width: 82px;
 }/*# sourceMappingURL=style.css.map */

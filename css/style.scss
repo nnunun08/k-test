@@ -72,6 +72,7 @@ p {
 }
 
 b {
+	color: #6F6E6E;
 	font-weight: 600;
 }
 
@@ -101,7 +102,8 @@ strong {
 	background: #F5F5F5;
 	box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25) inset;
 	&::placeholder {
-		color: #848383;
+		// color: #848383;
+		color: #B8B8B8;
 	}
 	@content;
 }
@@ -132,6 +134,42 @@ strong {
 	padding: 10px;
 	resize: none;
 	font-size: 12px;
+}
+
+.inputDiv {
+	@include foamStyle;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #B8B8B8;
+	font-size: 14px;
+	input {
+		border: 0;
+		background-color: transparent;
+		font-family: inherit;  /* 폰트 상속 */
+		-webkit-appearance: none; 
+		-moz-appearance: none;
+		appearance: none;
+		position: relative;
+		flex: 1 0 auto !important;
+	}
+	input::-webkit-calendar-picker-indicator {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: transparent; 
+		color: transparent;
+		cursor: pointer;
+	}
+
+	.flex {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
 }
 
 .checkboxBx {
@@ -340,6 +378,12 @@ strong {
 	.left {
 		min-width: 32px;
 		min-height: 32px;
+		.back {
+			display: block;
+			width: 32px;
+			height: 32px;
+			background: url(../img/ic_back.svg) center no-repeat;
+		}
 	}
 	.right {
 		min-width: 32px;
@@ -365,6 +409,7 @@ strong {
 		input, 
 		select {
 			flex: 1 0 0;
+			width: 100%;
 		}
 		.w25 {
 			flex: 0 0 25%;
@@ -372,5 +417,31 @@ strong {
 	}
 	.inputRow + .inputRow {
 		margin-top: 15px;
+	}
+
+	.inputLabel {
+		display: flex;
+		color: #6F6E6E;
+		font-size: 16px;
+		font-weight: 700;
+		margin-bottom: 8px;
+	}
+}
+
+.requestSummary {
+	// margin-top: 40px;
+	.tr {
+		display: flex;
+		gap: 6px;
+		font-weight: 500;
+		.date {
+			width: 82px;
+		}
+		.time {
+			width: 82px;
+		}
+		.during {
+			width: 82px;
+		}
 	}
 }
