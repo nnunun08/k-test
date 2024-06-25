@@ -285,6 +285,9 @@ strong {
   height: 100vh;
   box-sizing: border-box;
 }
+.section-login .inner {
+  padding-bottom: 200px;
+}
 .section-login .lock {
   display: flex;
   justify-content: flex-end;
@@ -365,7 +368,7 @@ strong {
   background: url(../img/btn_newGroup.svg) center no-repeat;
 }
 .section-login .notice {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
