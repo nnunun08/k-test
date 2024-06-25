@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.min.css"  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+
+    <section class="section-main">
+        <div class="inner">
+            <div class="topNav">
+                <div class="left">
+                    <!-- <a href="#" class="back"></a> -->
+                </div>
+                <div class="tit">K-test</div>
+                <div class="right">
+                    <a href="#" class="home"></a>
+                </div>
+            </div>
+
+            <div class="infoMesg">
+                <b>홍길동</b>님 KEIF 성향검사 결과<span class="red">감정-의지</span>형입니다
+            </div>
+
+            <div class="circleWrap">
+                <div class="userName">홍길동</div>
+                <div class="item">
+                    <div class="circle color">
+                        <div class="whiteBG">
+                            <div class="value">46.8%</div>
+                        </div>
+                    </div>
+                    <div class="label">감정</div>
+                </div>
+                <div class="item">
+                    <div class="circle grey1">
+                        <div class="whiteBG">
+                            <div class="value">33%</div>
+                        </div>
+                    </div>
+                    <div class="label">의지</div>
+                </div>
+                <div class="item">
+                    <div class="circle grey2">
+                        <div class="whiteBG">
+                            <div class="value">11.2%</div>
+                        </div>
+                    </div>
+                    <div class="label">융합</div>
+                </div>
+                <div class="item">
+                    <div class="circle grey3">
+                        <div class="whiteBG">
+                            <div class="value">8%</div>
+                        </div>
+                    </div>
+                    <div class="label">지식</div>
+                </div>
+            </div>
+
+            <div class="score">
+                <input class="value" type="text" value="타당도 : 80" />
+                <div class="desc">40점 이하는 신뢰할 수 없습니다</div>
+            </div>
+
+
+            <div class="accordion innerEscape" id="accordion">
+                <!-- #1 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#acc1" aria-expanded="true" aria-controls="acc1">
+                        유형별 하위요인
+                    </button>
+                  </h2>
+                  <div id="acc1" class="accordion-collapse collapse show" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        <div class="report">
+                            <div class="group">
+                                <div class="circleDiv color">감정</div>
+                                <ul>
+                                    <li class="list">
+                                        <span class="label">정서성</span>
+                                        <div class="barWrap">
+                                            <div class="bar color" style="width: 40%;" barValue="12%"></div>
+                                        </div>
+                                    </li>
+                                    <li class="list">
+                                        <span class="label">사교성</span>
+                                        <div class="barWrap">
+                                            <div class="bar" style="width: 30%;" barValue="10%"></div>
+                                        </div>
+                                    </li>
+                                    <li class="list">
+                                        <span class="label">표현성</span>
+                                        <div class="barWrap">
+                                            <div class="bar" style="width: 40%;" barValue="12%"></div>
+                                        </div>
+                                    </li>
+                                    <li class="list">
+                                        <span class="label">개방성</span>
+                                        <div class="barWrap">
+                                            <div class="bar light" style="width: 70%;" barValue="17%"></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="group">
+                                <div class="circleDiv grey1">의지</div>
+                                <ul>
+                                    <li class="list">
+                                        <span class="label">리더십</span>
+                                        <div class="barWrap">
+                                            <div class="bar color" style="width: 40%;" barValue="12%"></div>
+                                        </div>
+                                    </li>
+                                    <li class="list">
+                                        <span class="label">자기결정성</span>
+                                        <div class="barWrap">
+                                            <div class="bar" style="width: 30%;" barValue="10%"></div>
+                                        </div>
+                                    </li>
+                                    <li class="list">
+                                        <span class="label">목적지향성</span>
+                                        <div class="barWrap">
+                                            <div class="bar" style="width: 40%;" barValue="12%"></div>
+                                        </div>
+                                    </li>
+                                    <li class="list">
+                                        <span class="label">열정</span>
+                                        <div class="barWrap">
+                                            <div class="bar light" style="width: 70%;" barValue="17%"></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="group">
+                                <div class="circleDiv grey2">지식</div>
+                                <ul>
+                                    <li class="list">
+                                        <span class="label">체계성</span>
+                                        <div class="barWrap">
+                                            <div class="bar color" style="width: 40%;" barValue="12%"></div>
+                                        </div>
+                                    </li>
+                                    <li class="list">
+                                        <span class="label">학구열</span>
+                                        <div class="barWrap">
+                                            <div class="bar" style="width: 30%;" barValue="10%"></div>
+                                        </div>
+                                    </li>
+                                    <li class="list">
+                                        <span class="label">자기통제성</span>
+                                        <div class="barWrap">
+                                            <div class="bar" style="width: 40%;" barValue="12%"></div>
+                                        </div>
+                                    </li>
+                                    <li class="list">
+                                        <span class="label">규범성</span>
+                                        <div class="barWrap">
+                                            <div class="bar light" style="width: 70%;" barValue="17%"></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="group">
+                                <div class="circleDiv grey3">융합</div>
+                                <ul>
+                                    <li class="list">
+                                        <span class="label">타인중심성</span>
+                                        <div class="barWrap">
+                                            <div class="bar color" style="width: 40%;" barValue="12%"></div>
+                                        </div>
+                                    </li>
+                                    <li class="list">
+                                        <span class="label">수용성</span>
+                                        <div class="barWrap">
+                                            <div class="bar" style="width: 30%;" barValue="10%"></div>
+                                        </div>
+                                    </li>
+                                    <li class="list">
+                                        <span class="label">온정성</span>
+                                        <div class="barWrap">
+                                            <div class="bar" style="width: 40%;" barValue="12%"></div>
+                                        </div>
+                                    </li>
+                                    <li class="list">
+                                        <span class="label">안정성</span>
+                                        <div class="barWrap">
+                                            <div class="bar light" style="width: 70%;" barValue="17%"></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- #2 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc2" aria-expanded="false" aria-controls="acc2">
+                        순위별 하위요인
+                    </button>
+                  </h2>
+                  <div id="acc2" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                      ...
+                    </div>
+                  </div>
+                </div>
+
+                <!-- #3 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc3" aria-expanded="false" aria-controls="acc3">
+                        다이어그램 보기
+                    </button>
+                  </h2>
+                  <div id="acc3" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        ...
+                    </div>
+                  </div>
+                </div>
+
+                <!-- #4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc4" aria-expanded="false" aria-controls="acc4">
+                        홍길동님 강점
+                      </button>
+                    </h2>
+                    <div id="acc4" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                      <div class="accordion-body">
+                        ...
+                      </div>
+                    </div>
+                </div>
+
+                <!-- #5 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc5" aria-expanded="false" aria-controls="acc5">
+                        홍길동님 약점
+                      </button>
+                    </h2>
+                    <div id="acc5" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                      <div class="accordion-body">
+                        ...
+                      </div>
+                    </div>
+                </div>
+
+                <!-- #6 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc6" aria-expanded="false" aria-controls="acc6">
+                        솔루션
+                      </button>
+                    </h2>
+                    <div id="acc6" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                      <div class="accordion-body">
+                        ...
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="innerEscape" style="margin-top: 16px;">
+                <a href="#" class="etcFunction">부모자녀_유아용 </a>
+                <a href="#" class="etcFunction">부모자녀_아동용 </a>
+                <a href="#" class="etcFunction">청소년용 </a>
+                <a href="#" class="etcFunction">성인용 </a>
+                <a href="#" class="etcFunction">커플-부부용 </a>
+                <a href="#" class="etcFunction">업무용(그룹매칭) </a>
+            </div>
+            
+
+            <div class="bottomNav">
+                <a href="#" class="btn">자세한 검사해석 결과보기</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
