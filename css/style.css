@@ -285,9 +285,6 @@ strong {
   height: 100vh;
   box-sizing: border-box;
 }
-.section-login .inner {
-  padding-bottom: 200px;
-}
 .section-login .lock {
   display: flex;
   justify-content: flex-end;
@@ -368,14 +365,11 @@ strong {
   background: url(../img/btn_newGroup.svg) center no-repeat;
 }
 .section-login .notice {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
   padding: 12px 20px 38px;
   background-color: rgba(255, 255, 255, 0.9);
   max-width: 430px;
   margin: 0 auto;
+  margin-top: 80px;
 }
 .section-login .notice .tit {
   color: var(--black);

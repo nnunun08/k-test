@@ -239,10 +239,9 @@ strong {
 	position: relative;
 	height: 100vh;
 	box-sizing: border-box;
-	.inner {
-		padding-bottom: 200px;
-	}
-
+	// .inner {
+	// 	padding-bottom: 200px;
+	// }
 	.lock {
 		display: flex;
 		justify-content: flex-end;
@@ -328,14 +327,15 @@ strong {
 	}
 
 	.notice {
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		right: 0;
+		// position: fixed;
+		// bottom: 0;
+		// left: 0;
+		// right: 0;
 		padding: 12px 20px 38px;
 		background-color: rgba(255,255,255,0.9);
 		max-width: $maxWidth;
 		margin: 0 auto;
+		margin-top: 80px;
 		.tit {
 			color: var(--black);
 			font-size: 12px;
