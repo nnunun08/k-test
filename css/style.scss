@@ -919,6 +919,7 @@ $topNavHeight : 55px;
 		justify-content: space-evenly;
 		width: 100%;
 		.button {
+			transition: 0.3s;
 			background-color: transparent;
 			max-width: 110px;
 			width: 20%;
